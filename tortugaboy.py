@@ -41,7 +41,9 @@ def get_user(id):
 
 
 def help():
-    post_message('Commands:\n\n'
+    post_message('Hello! My name is Tortuga Boy.\n'
+                 'Wanna play with me?\n'
+                 'My commands:\n\n'
                  '*!game* or *!g*\n '
                  '*!gamerules* or *!gr*\n')
 
