@@ -69,12 +69,12 @@ def game(user):
         post_message('No-no-no, @' + user + ', no-no-no.')
         return
     magic = randint(100, 99999999)
-    post_message('Game will start after ' + str(delay) + ' seconds. Magic number is.... *' + dashes(magic) + '*')
+    post_message('Game will start after ' + str(delay) + ' seconds.')
     in_delay = True
     for x in reversed(range(0, delay)):
         post_message(str(x) + '...')
         time.sleep(1)
-    post_message('*Start!*')
+    post_message('*Start!* Magic number is.... *' + dashes(magic) + '*')
     in_delay = False
     started = True
 
