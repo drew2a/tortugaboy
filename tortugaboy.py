@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 from random import randint
 
 from slacker import Slacker
@@ -15,11 +16,13 @@ slack = Slacker(os.getenv('TOKEN'))
 username = os.getenv('USERNAME', 'tortugaboy')
 icon_emoji = os.getenv('ICON_EMOJI', ':moyai:')
 channel = os.getenv('CHANNEL', '#random')
+delay = int(os.getenv('DELAY_IN_SEC', '3'))
 
 commands = ['game', 'gamerules', 'help', 'g', 'gr', 'h']
 
 magic = -12
 started = False
+in_delay = False
 
 
 def post_message(text, attachments=None):
@@ -61,12 +64,18 @@ def dashes(i):
 
 
 def game(user):
-    global started, magic
-    if started:
+    global started, magic, in_delay
+    if started or in_delay:
         post_message('No-no-no, @' + user + ', no-no-no.')
         return
     magic = randint(100, 99999999)
-    post_message('Game started! Magic number is.... *' + dashes(magic) + '*')
+    post_message('Game will start after ' + str(delay) + ' seconds. Magic number is.... *' + dashes(magic) + '*')
+    in_delay = True
+    for x in reversed(range(0, delay)):
+        post_message(str(x) + '...')
+        time.sleep(1)
+    post_message('*Start!*')
+    in_delay = False
     started = True
 
 
