@@ -20,6 +20,7 @@ Tortugaboy is a [Slack](https://slack.com/) game bot.
    - `USERNAME`: your bot's username. (optional; defaults to `'tortugaboy'`)
    - `ICON_EMOJI`: the emoji used in the bot's icon. (optional; defaults to `':moyai:'`)
    - `CHANNEL`: the channel in which you stand up. (optional; defaults to `'#random'`)
+   - `DELAY_IN_SEC`: the countdown timer value in seconds. (optional; defaults to `3`)
   
 5. Add the URL where the web app is deployed as an [outgoing webhook](https://my.slack.com/services/new/outgoing-webhook) in Slack. Don't forget the trailing `/`!
 6. Type `!help` in your chosen channel to see help message and `!game` to start the game.
