@@ -26,7 +26,7 @@ Tortugaboy is a [Slack](https://slack.com/) game bot.
 6. Type `!help` in your chosen channel to see help message and `!game` to start the game.
 
 ## Thanks
-This bot totally based on https://github.com/eelzon/morgenbot by @eelzon, Thank you.
+This bot totally based on https://github.com/eelzon/morgenbot by [@eelzon](https://github.com/eelzon), Thank you.
 
 ## Contributors
 * @drew2a
