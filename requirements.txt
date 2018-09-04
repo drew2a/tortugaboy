@@ -1,5 +1,5 @@
-Flask==0.10.1
+Flask==0.12.3
 requests==2.2.1
 wsgiref==0.1.2
-gunicorn==18.0
+gunicorn==19.5.0
 slacker==0.4.0
