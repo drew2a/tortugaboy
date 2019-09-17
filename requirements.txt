@@ -1,4 +1,4 @@
-Flask==0.12.3
+flask>=1.0.0
 requests>=2.20.0
 wsgiref==0.1.2
 gunicorn==19.5.0
